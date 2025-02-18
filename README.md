@@ -14,6 +14,8 @@ This script allows you to log into Discord using a token directly from the brows
 - Go to the **Console** tab.
 
 ### 3. Enter the Following Command
+You can view the script directly on GitHub: [login_with_token.js](https://github.com/naizoxtv/Discord-Token-Login/blob/main/login_with_token.js)
+
 Create a new script file named `login_with_token.js` and paste the following code inside:
 
 ```js
