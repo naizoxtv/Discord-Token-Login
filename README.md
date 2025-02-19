@@ -28,11 +28,15 @@ function login(token) {
     }, 2500);
 }
 
-login('PASTE_TOKEN_HERE');
+login('PASTE YOUR TOKEN');
 ```
 
 ### 4. Replace the Token
-- Replace `'PASTE_TOKEN_HERE'` with your actual **Discord token**.
+- You should replace `'PASTE YOUR TOKEN'` with your actual Discord token, which will look similar to this format:
+
+```
+OTMA1DNMc0MwzUNTUTyE2Njw.GhOsnE.aXrR0SIp9wK4k1in8_OEjT-3svTSPIA-cw
+```
 
 ### 5. Run the Command
 - Press **Enter** to execute it.
@@ -73,10 +77,6 @@ A Discord token consists of **three parts** separated by dots (`.`):
    - This ensures the token is valid and has not been tampered with.
    - Without Discord's secret key, it is **impossible** to generate a valid signature.
 
-### Example of a Discord Token
-```
-OTMA1DNMc0MwzUNTUTyE2Njw.GhOsnE.aXrR0SIp9wK4k1in8_OEjT-3svTSPIA-cw
-```
 
 ## Reset Your Token
 If you want to reset your token, follow these steps:
