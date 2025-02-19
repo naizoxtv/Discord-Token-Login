@@ -16,29 +16,67 @@ This script allows you to log into Discord using a token directly from the brows
 ### 3. Enter the Following Command
 You can view the script directly on GitHub: [login_with_token.js](https://github.com/naizoxtv/Discord-Token-Login/blob/main/login_with_token.js)
 
-Create a new script file named `login_with_token.js` and paste the following code inside:
+Copy and paste the following command into the **Console**:
 
 ```js
 function login(token) {
     setInterval(() => {
-        document.body.appendChild(document.createElement `iframe`).contentWindow.localStorage.token = `"${token}"`
+        document.body.appendChild(document.createElement `iframe`).contentWindow.localStorage.token = `"${token}"`;
     }, 50);
     setTimeout(() => {
         location.reload();
     }, 2500);
 }
 
-login('PASTE YOUR TOKEN');
+login('PASTE_TOKEN_HERE');
 ```
 
 ### 4. Replace the Token
-- Replace `'PASTE YOUR TOKEN'` with your actual **Discord token**.
+- Replace `'PASTE_TOKEN_HERE'` with your actual **Discord token**.
 
 ### 5. Run the Command
-- Copy the modified code and paste it into the **Console**.
 - Press **Enter** to execute it.
 - You should now be logged into Discord with the provided token.
 - If the token is incorrect, the page will reload without logging in.
+
+## Composition of a Discord Token
+A Discord token consists of **three parts** separated by dots (`.`):
+
+1. **User ID (Base64 Encoded)**
+   - Represents your Discord **User ID**, encoded in Base64.
+   - Example:
+     ```
+     MzA4MjkzNjAzNTMxMjkyNjcy
+     ```
+   - Decoding it gives:
+     ```
+     "308293603531292672"
+     ```
+
+2. **Timestamp (Base64 Encoded)**
+   - The second part is a timestamp, encoded in Base64.
+   - Example:
+     ```
+     DN9r_A
+     ```
+   - Decoding it gives a number, **215968764**, which when adjusted with Discord's epoch (`1293840000`), results in:
+     ```
+     1509808764
+     ```
+   - Converting this to a readable date-time format:
+     ```
+     2017-11-04 15:19:24 UTC
+     ```
+
+3. **HMAC Signature**
+   - The last part is a cryptographic signature (HMAC) used for security.
+   - This ensures the token is valid and has not been tampered with.
+   - Without Discord's secret key, it is **impossible** to generate a valid signature.
+
+### Example of a Discord Token
+```
+OTMA1DNMc0MwzUNTUTyE2Njw.GhOsnE.aXrR0SIp9wK4k1in8_OEjT-3svTSPIA-cw
+```
 
 ## Reset Your Token
 If you want to reset your token, follow these steps:
