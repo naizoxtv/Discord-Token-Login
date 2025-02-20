@@ -3,6 +3,8 @@
 ## Description
 This script allows you to log into Discord using a token directly from the browser console. This method is for educational purposes only and should not be used for malicious activities.
 
+**Watch [this video](https://www.youtube.com/watch?v=aPoRQ0hxvc4) for a step-by-step visual guide on how to log in to Discord using your token.**  
+
 ## Step-by-Step Guide
 
 ### 1. Open the Discord Web App
